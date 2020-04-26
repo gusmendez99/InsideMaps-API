@@ -18,6 +18,12 @@ let userSchema = new Schema({
     role: {
         type: Number
     },
+    age: {
+        type: Number
+    },
+    gender: {
+        type: Number
+    },
     email: {
         type: String,
         unique: true

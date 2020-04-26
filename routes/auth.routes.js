@@ -35,7 +35,16 @@ router.post("/auth/signup",
             .isEmpty(),
         check('role', 'Email is required')
             .not()
-            .isEmpty(),
+            .isEmpty()
+            .isNumeric(),
+        check('gender', 'Gender is required')
+            .not()
+            .isEmpty()
+            .isNumeric(),
+        check('age', 'Age is required')
+            .not()
+            .isEmpty()
+            .isNumeric(),
         check('password', 'Password should be between 5 to 20 characters long')
             .not()
             .isEmpty()
@@ -55,6 +64,8 @@ router.post("/auth/signup",
                     lastname: req.body.lastname,
                     username: req.body.username,
                     role: USER_ROLE,
+                    age: req.body.age,
+                    gender: req.body.gender,
                     email: req.body.email,
                     password: hash
                 });

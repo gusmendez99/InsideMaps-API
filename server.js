@@ -4,6 +4,10 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const dbConfig = require('./database/db');
 
+//.env config
+require('dotenv').config()
+
+
 //API
 const API_VERSION = '/api/v1';
 

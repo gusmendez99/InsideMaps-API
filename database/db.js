@@ -1,4 +1,11 @@
+require('dotenv').config()
+
+const database = process.env.DATABASE;
+const user = process.env.DBOWNER;
+const password = process.env.DBPASSWORD;
+
+console.log(`mongodb://${user}:${password}@ds153096.mlab.com:53096/${database}`)
+
 module.exports = {
-    db: 'mongodb://root:pinturilloteam99@ds153096.mlab.com:53096/inside-maps-api'
+    db: `mongodb://${user}:${password}@ds153096.mlab.com:53096/${database}`
 }
-//TODO: It needs to be stored on .env file
