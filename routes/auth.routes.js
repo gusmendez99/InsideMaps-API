@@ -19,21 +19,21 @@ router.post("/auth/signup",
             .not()
             .isEmpty()
             .isLength({ min: 3 })
-            .withMessage('Firstname must be atleast 3 characters long'),
+            .withMessage('Firstname must be at least 3 characters long'),
         check('lastname')
             .not()
             .isEmpty()
             .isLength({ min: 3 })
-            .withMessage('Lastname must be atleast 3 characters long'),
+            .withMessage('Lastname must be at least 3 characters long'),
         check('username')
             .not()
             .isEmpty()
             .isLength({ min: 3 })
-            .withMessage('Lastname must be atleast 3 characters long'),
+            .withMessage('Username must be at least 3 characters long'),
         check('email', 'Email is required')
             .not()
             .isEmpty(),
-        check('role', 'Email is required')
+        check('role', 'Role is required')  //1 for normal users, 2 for admins
             .not()
             .isEmpty()
             .isNumeric(),
