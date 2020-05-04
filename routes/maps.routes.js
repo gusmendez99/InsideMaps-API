@@ -1,7 +1,7 @@
 // routes/user.routes.js
 const express = require("express");
 const router = express.Router();
-const mapSchema = require("../models/Map");
+const mapSchema = require("../models/Maps");
 const authorize = require("../middlewares/auth");
 
 
