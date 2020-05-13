@@ -24,11 +24,11 @@ router.post("/map/", (req, res, next) => {
     description: req.body.description,
     id_place: req.body.id_place,
     level: req.body.level,
-    age: req.body.age,
+    year: req.body.year,
     map_filename: req.body.map_filename,
     qr_code: req.body.qr_code
   });
-  user.save()
+  map.save()
     .then((response) => {
       res.status(201).json({
         message: "Map successfully created!",

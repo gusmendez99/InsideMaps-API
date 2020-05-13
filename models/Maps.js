@@ -18,7 +18,7 @@ let mapSchema = new Schema({
     level: {
         type: Number
     },
-    age: {
+    year: {
         type: Number
     },
     map_filename: {
