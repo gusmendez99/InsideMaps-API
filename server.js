@@ -15,6 +15,7 @@ const API_VERSION = '/api/v1';
 const authRouter = require('./routes/auth.routes');
 const userRouter = require('./routes/user.routes');
 const mapRouter = require('./routes/maps.routes')
+const markerRouter = require('./routes/markers.routes');
 
 // MongoDB conection
 mongoose.Promise = global.Promise;
@@ -47,6 +48,7 @@ app.use('/public', express.static('public'));
 app.use(API_VERSION, authRouter)
 app.use(API_VERSION, userRouter)
 app.use(API_VERSION, mapRouter)
+app.use(API_VERSION, markerRouter)
 
 // Define PORT
 const port = process.env.PORT || 4000;

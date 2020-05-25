@@ -2,7 +2,9 @@
 const express = require("express");
 const router = express.Router();
 const mapSchema = require("../models/Maps");
+const markerSchema = require("../models/Markers");
 const authorize = require("../middlewares/auth");
+const mongoose = require('mongoose');
 
 // Get Maps
 //router.route('/user/').get(authorize, (req, res) ...
@@ -25,8 +27,7 @@ router.post("/map/", (req, res, next) => {
     id_place: req.body.id_place,
     level: req.body.level,
     year: req.body.year,
-    map_filename: req.body.map_filename,
-    qr_code: req.body.qr_code
+    loc: {type: "Point", coordinates: req.body.coordinates } 
   });
   map.save()
     .then((response) => {
@@ -42,14 +43,33 @@ router.post("/map/", (req, res, next) => {
     });
 });
 
-// Get Single User
-router.route("/map/:id").get(authorize, (req, res, next) => {
+// Get Single Map
+router.route("/map/:id").get((req, res, next) => {
   mapSchema.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error);
     } else {
       res.status(200).json({
-        msg: data,
+        message: "Map retrieved successfully",
+        result: data,
+      });
+    }
+  });
+});
+
+// Get Markers of a single Map
+router.route("/map/:id/markers").get((req, res, next) => {
+  
+  const val = mongoose.Types.ObjectId(req.params.id);
+
+  
+  markerSchema.find({map_id: val}, (error, data) => {
+    if (error) {
+      return next(error);
+    } else {
+      res.status(200).json({
+        message: "Map markers retrieved successfully",
+        result: data,
       });
     }
   });

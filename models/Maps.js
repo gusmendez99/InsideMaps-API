@@ -21,13 +21,9 @@ let mapSchema = new Schema({
     year: {
         type: Number
     },
-    map_filename: {
-        type: String,
-        unique: true
-    },
-    qr_code: {
-        type: String,
-        unique: true
+    loc: {
+        type: { type: String },
+        coordinates: [Number]
     }
 }, {
     collection: 'maps'

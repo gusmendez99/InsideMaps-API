@@ -7,14 +7,9 @@ let markerSchema = new Schema({
     name : {
         type: String
     },
-    local_number: {
-        type: Number
-    },
-    longitude: {
-        type: mongoose.Decimal128
-    },
-    latitude: {
-        type: mongoose.Decimal128
+    loc: {
+        type: { type: String },
+        coordinates: [Number]
     },
     map_id: {
         type: mongoose.Schema.Types.ObjectId, ref: 'Maps'
