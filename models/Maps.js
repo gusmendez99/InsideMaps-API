@@ -23,11 +23,12 @@ let mapSchema = new Schema({
     },
     loc: {
         type: { type: String },
-        coordinates: [Number]
+        coordinates: []
     }
 }, {
     collection: 'maps'
 })
 
-mapSchema.plugin(uniqueValidator, { message: 'Map filename or qr_code already in use' });
+//mapSchema.plugin(uniqueValidator, { message: 'Map filename or qr_code already in use' });
+mapSchema.index({loc:'2dsphere'});
 module.exports = mongoose.model('Map', mapSchema)

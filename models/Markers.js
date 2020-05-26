@@ -9,7 +9,7 @@ let markerSchema = new Schema({
     },
     loc: {
         type: { type: String },
-        coordinates: [Number]
+        coordinates: []
     },
     map_id: {
         type: mongoose.Schema.Types.ObjectId, ref: 'Maps'
@@ -18,4 +18,5 @@ let markerSchema = new Schema({
     collection: 'markers'
 })
 
+markerSchema.index({loc:'2dsphere'});
 module.exports = mongoose.model('Marker', markerSchema)
