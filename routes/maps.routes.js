@@ -32,10 +32,14 @@ router.post("/map/", (req, res, next) => {
   map.save()
     .then((response) => {
 
-      markerSchema.find({map_id: { $exists: false}}).forEach(doc =>{
-        doc.map_id = map._id
-        doc.save()
-      })
+      console.log(markerSchema.find({map_id: { $exists: false}}))
+      console.log("ID is: ", map._id)
+      markerSchema.updateMany({map_id: { $exists: false}}, {map_id: map._id}, function(err, numberAffected, rawResponse) {
+        //handle it
+        if(err) {
+          console.log(err)
+        }
+     })
 
       res.status(201).json({
         message: "Map successfully created!",
