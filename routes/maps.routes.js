@@ -32,7 +32,7 @@ router.post("/map/", (req, res, next) => {
   map.save()
     .then((response) => {
 
-      markerSchema.find({ map_id: null}).forEach(doc =>{
+      markerSchema.find({map_id: { $exists: false}}).forEach(doc =>{
         doc.map_id = map._id
         doc.save()
       })
