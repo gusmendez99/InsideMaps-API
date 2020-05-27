@@ -21,14 +21,21 @@ let mapSchema = new Schema({
     year: {
         type: Number
     },
-    loc: {
-        type: { type: String },
-        coordinates: []
+    location: {
+        type: {
+          type: String, // Don't do `{ location: { type: String } }`
+          enum: ['Point'], // 'location.type' must be 'Point'
+          required: true
+        },
+        coordinates: {
+          type: [Number],
+          required: true
+        }
     }
 }, {
     collection: 'maps'
 })
 
 //mapSchema.plugin(uniqueValidator, { message: 'Map filename or qr_code already in use' });
-mapSchema.index({loc:'2dsphere'});
+//mapSchema.index({loc:'2dsphere'});
 module.exports = mongoose.model('Map', mapSchema)
