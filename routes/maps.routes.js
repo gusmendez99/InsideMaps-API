@@ -22,6 +22,7 @@ router.route("/map/").get((req, res) => {
 router.post("/map/", (req, res, next) => {
   console.log(req.body);
   const map = new mapSchema({
+    _id: req.body._id,
     name: req.body.name,
     description: req.body.description,
     id_place: req.body.id_place,
@@ -31,6 +32,9 @@ router.post("/map/", (req, res, next) => {
   });
   map.save()
     .then((response) => {
+
+      markerSchema.findOneAndUpdate({ map_id: null}, {map_id: req.body._id})
+
       res.status(201).json({
         message: "Map successfully created!",
         result: response,
