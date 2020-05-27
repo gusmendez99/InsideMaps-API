@@ -27,7 +27,7 @@ router.post("/map/", (req, res, next) => {
     id_place: req.body.id_place,
     level: req.body.level,
     year: req.body.year,
-    loc: {type: "Point", coordinates: req.body.coordinates } 
+    location: req.body.location
   });
   map.save()
     .then((response) => {

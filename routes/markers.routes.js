@@ -22,7 +22,7 @@ router.post("/marker/", (req, res, next) => {
   const marker = new markerSchema({
     name: req.body.name,
     map_id: req.body.map_id,
-    loc: { type: "Point", coordinates: req.body.coordinates } 
+    location: req.body.location 
   });
   marker.save()
     .then((response) => {
