@@ -4,22 +4,27 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let markerSchema = new Schema({
+    type: {
+        type: String
+    },
     name : {
         type: String
     },
-    location: {
-        type: {
-          type: String, // Don't do `{ location: { type: String } }`
-          enum: ['Point'], // 'location.type' must be 'Point'
-          required: true
-        },
-        coordinates: {
-          type: [Number],
-          required: true
-        }
+    img: {
+        type: String
+    },
+    coordinates:{
+        type: [Number]
+    },
+    level:{
+        type: Number
     },
     map_id: {
         type: mongoose.Schema.Types.ObjectId, ref: 'Maps'
+    },
+    asociaciones:{
+        type: Map,
+        of: Number
     }
 }, {
     collection: 'markers'

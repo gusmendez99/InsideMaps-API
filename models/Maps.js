@@ -9,29 +9,15 @@ let mapSchema = new Schema({
     name : {
         type: String
     },
-    description: {
-        type: String
-    },
-    id_place: {
-        type: mongoose.Schema.Types.ObjectId, ref: 'Institution'
-    },
-    level: {
+    latitude: {
         type: Number
     },
-    year: {
+    logitude:{
         type: Number
     },
-    location: {
-        type: {
-          type: String, // Don't do `{ location: { type: String } }`
-          enum: ['Point'], // 'location.type' must be 'Point'
-          required: true
-        },
-        coordinates: {
-          type: [Number],
-          required: true
-        }
-    }
+    active:{
+        type: Boolean
+    },
 }, {
     collection: 'maps'
 })
