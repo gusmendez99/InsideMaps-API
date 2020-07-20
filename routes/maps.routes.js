@@ -23,11 +23,9 @@ router.post("/map/", (req, res, next) => {
   console.log(req.body);
   const map = new mapSchema({
     name: req.body.name,
-    description: req.body.description,
-    id_place: req.body.id_place,
-    level: req.body.level,
-    year: req.body.year,
-    location: req.body.location
+    latitude: req.body.latitude,
+    longitude: req.body.longitude,
+    active: req.body.active,
   });
   map.save()
     .then((response) => {
