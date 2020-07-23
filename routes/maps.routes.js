@@ -22,19 +22,21 @@ router.route("/map/").get((req, res) => {
 router.post("/map/", (req, res, next) => {
   
   const graph = {}
-
-  for (const marker in req.body.markers){
-    Object.assign(graph, {[marker]: req.body.markers[marker].associates})
+  const markers = req.body.markers
+  const {name, description, id_place, level, year, location, active} = req.body.map;
+  
+  for (const marker in markers){
+    Object.assign(graph, {[marker]: markers[marker].associates})
   }
 
   const map = new mapSchema({
-    name: req.body.map.name,
-    description: req.body.map.description,
-    id_place: req.body.map.id_place,
-    level: req.body.map.level,
-    year: req.body.map.year,
-    location: req.body.map.location,
-    active: req.body.map.active,
+    name: name,
+    description: description,
+    id_place: id_place,
+    level: level,
+    year: year,
+    location: location,
+    active: active,
     graph: graph
   });
 

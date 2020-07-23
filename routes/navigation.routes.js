@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const findShortestPath = require('../utils/navigation.utils');
 
 // Get Markers of a single Map
-router.post("/navigation/:id/find-shortest-path", (req, res, next) => {
+router.post("/navigation/find-shortest-path/:id", (req, res, next) => {
     const {startNode, endNode } = req.body;
 
     mapSchema.findById(req.params.id, (error, data) => {
