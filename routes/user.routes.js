@@ -4,7 +4,7 @@ const router = express.Router();
 const userSchema = require("../models/User");
 const authorize = require("../middlewares/auth");
 
-
+ 
 // Get Users
 //router.route('/user/').get(authorize, (req, res) ...
 router.route('/user/').get((req, res) => {

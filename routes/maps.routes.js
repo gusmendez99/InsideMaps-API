@@ -20,19 +20,28 @@ router.route("/map/").get((req, res) => {
 
 //Create map
 router.post("/map/", (req, res, next) => {
-  console.log(req.body);
+  
+  const graph = {}
+
+  for (const marker in req.body.markers){
+    Object.assign(graph, {[marker]: req.body.markers[marker].associates})
+  }
+
   const map = new mapSchema({
-    name: req.body.name,
-    description: req.body.description,
-    id_place: req.body.id_place,
-    level: req.body.level,
-    year: req.body.year,
-    location: req.body.location
+    name: req.body.map.name,
+    description: req.body.map.description,
+    id_place: req.body.map.id_place,
+    level: req.body.map.level,
+    year: req.body.map.year,
+    location: req.body.map.location,
+    active: req.body.map.active,
+    graph: graph
   });
+
   map.save()
     .then((response) => {
 
-      console.log(markerSchema.find({map_id: { $exists: false}}))
+      //console.log(markerSchema.find({map_id: { $exists: false}}))
       console.log("ID is: ", map._id)
       markerSchema.updateMany({map_id: { $exists: false}}, {map_id: map._id}, function(err, numberAffected, rawResponse) {
         //handle it

@@ -3,10 +3,11 @@ const express = require("express");
 const router = express.Router();
 const markerSchema = require("../models/Markers");
 const authorize = require("../middlewares/auth");
+const { request } = require("express");
 
 // Get Markers
 //router.route('/user/').get(authorize, (req, res) ...
-router.route("/marker/").get((req, res) => {
+router.route("/markers/").get((req, res) => {
   markerSchema.find((error, response) => {
     if (error) {
       return next(error);
@@ -15,6 +16,22 @@ router.route("/marker/").get((req, res) => {
     }
   });
 });
+
+// Get Single Marker
+router.get("/marker", (req, res, next) => {
+  
+  markerSchema.find({ "name" :  {'$regex': new RegExp(req.query.name, "i")}}, (error, data) => {
+    if (error) {
+      return next(error);
+    } else {
+      res.status(200).json({
+        message: "Markers retrieved successfully",
+        result: data,
+      });
+    }
+  });
+});
+
 
 //Create marker
 router.post("/marker/", (req, res, next) => {
@@ -37,5 +54,7 @@ router.post("/marker/", (req, res, next) => {
       });
     });
 });
+
+
 
 module.exports = router;

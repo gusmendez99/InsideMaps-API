@@ -9,15 +9,27 @@ let mapSchema = new Schema({
     name : {
         type: String
     },
-    latitude: {
+    description: {
+        type: String
+    },
+    id_place: {
+        type: String
+    },
+    level: {
         type: Number
     },
-    logitude:{
+    year: {
         type: Number
+    },
+    location: {
+        type: Map
     },
     active:{
         type: Boolean
     },
+    graph:{
+        type: Map
+    }
 }, {
     collection: 'maps'
 })

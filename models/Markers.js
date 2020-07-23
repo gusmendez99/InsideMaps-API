@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+//mongoose.set('debug', true);
 
 let markerSchema = new Schema({
     type: {
@@ -22,7 +23,7 @@ let markerSchema = new Schema({
     map_id: {
         type: mongoose.Schema.Types.ObjectId, ref: 'Maps'
     },
-    asociaciones:{
+    associates:{
         type: Map,
         of: Number
     }
