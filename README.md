@@ -1,6 +1,6 @@
 # Inside Maps API
 
-Node Token-based Authentication REST APIs fro Inside Maps API. Software Engineering project, 2020.
+Node Token-based Authentication REST APIs for Inside Maps Project. Software Engineering project, 2020.
 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) 
 
@@ -39,9 +39,6 @@ Node Token-based Authentication REST APIs fro Inside Maps API. Software Engineer
 ## Routes
 
 Here are the main routes used in the API
-
-* GET (users list)	  **/api/v1/user**
-* GET (user profile)	  **/api/v1/user/id**
 
 *  Auth
    * Email Register (POST)
