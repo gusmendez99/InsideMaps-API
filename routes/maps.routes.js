@@ -24,7 +24,8 @@ router.post("/map/", (req, res, next) => {
   const graph = {}
   const markers = req.body.markers
   const {name, description, id_place, level, year, location, active} = req.body.map;
-  
+  const markerArray = []
+
   for (const marker in markers){
     Object.assign(graph, {[marker]: markers[marker].associates})
   }
@@ -51,6 +52,17 @@ router.post("/map/", (req, res, next) => {
           console.log(err)
         }
      })
+     for (const marker in markers){
+      markers[marker] = {...markers[marker], map_id:map._id}
+      markerArray.push(markers[marker])
+    }
+    console.log(markerArray)
+    markerSchema.insertMany(markerArray)
+    .then(function(){
+      console.log('Markers succesfully created')
+    }).catch(function(error){
+      console.log('error adding markers:', error)
+    })
 
       res.status(201).json({
         message: "Map successfully created!",
