@@ -107,7 +107,7 @@ router.post("/auth/signin", (req, res, next) => {
             email: getUser.email,
             userId: getUser._id,
             role: getUser.role,
-        }, "longer-secret-is-better", {
+        }, "secret-key", {
             expiresIn: "1h"
         });
         res.status(200).json({

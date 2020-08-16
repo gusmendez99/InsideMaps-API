@@ -7,8 +7,7 @@ const authorize = require("../middlewares/auth");
 const mongoose = require('mongoose');
 
 // Get Maps
-//router.route('/user/').get(authorize, (req, res) ...
-router.route("/map/").get((req, res) => {
+router.route("/map/").get(authorize, (req, res) => {
   mapSchema.find((error, response) => {
     if (error) {
       return next(error);
@@ -19,7 +18,7 @@ router.route("/map/").get((req, res) => {
 });
 
 //Create map
-router.post("/map/", (req, res, next) => {
+router.post("/map/", authorize, (req, res, next) => {
   
   const graph = {}
   const markers = req.body.markers
@@ -31,14 +30,14 @@ router.post("/map/", (req, res, next) => {
   }
 
   const map = new mapSchema({
-    name: name,
-    description: description,
-    id_place: id_place,
-    level: level,
-    year: year,
-    location: location,
-    active: active,
-    graph: graph
+    name,
+    description,
+    id_place,
+    level,
+    year,
+    location,
+    active,
+    graph
   });
 
   map.save()
@@ -56,7 +55,8 @@ router.post("/map/", (req, res, next) => {
       markers[marker] = {...markers[marker], map_id:map._id}
       markerArray.push(markers[marker])
     }
-    console.log(markerArray)
+    
+    //console.log(markerArray)
     markerSchema.insertMany(markerArray)
     .then(function(){
       console.log('Markers succesfully created')
@@ -93,10 +93,9 @@ router.route("/map/:id").get((req, res, next) => {
 // Get Markers of a single Map
 router.route("/map/:id/markers").get((req, res, next) => {
   
-  const val = mongoose.Types.ObjectId(req.params.id);
+  const mapId = mongoose.Types.ObjectId(req.params.id);
 
-  
-  markerSchema.find({map_id: val}, (error, data) => {
+  markerSchema.find({map_id: mapId}, (error, data) => {
     if (error) {
       return next(error);
     } else {
@@ -109,7 +108,7 @@ router.route("/map/:id/markers").get((req, res, next) => {
 });
 
 // Update Map
-router.route("/map/:id").put((req, res, next) => {
+router.route("/map/:id").put(authorize, (req, res, next) => {
   mapSchema.findByIdAndUpdate(
     req.params.id,
     {
@@ -117,8 +116,8 @@ router.route("/map/:id").put((req, res, next) => {
     },
     (error, data) => {
       if (error) {
-        return next(error);
         console.log(error);
+        return next(error);
       } else {
         res.json(data);
         console.log("Map successfully updated!");
@@ -128,7 +127,7 @@ router.route("/map/:id").put((req, res, next) => {
 });
 
 // Delete Map
-router.route("/map/:id").delete((req, res, next) => {
+router.route("/map/:id").delete(authorize, (req, res, next) => {
   mapSchema.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       return next(error);

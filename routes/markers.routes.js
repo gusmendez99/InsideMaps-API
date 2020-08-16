@@ -6,8 +6,7 @@ const authorize = require("../middlewares/auth");
 const { request } = require("express");
 
 // Get Markers
-//router.route('/user/').get(authorize, (req, res) ...
-router.route("/markers/").get((req, res) => {
+router.route("/markers/").get(authorize, (req, res) => {
   markerSchema.find((error, response) => {
     if (error) {
       return next(error);
@@ -17,7 +16,7 @@ router.route("/markers/").get((req, res) => {
   });
 });
 
-// Get Single Marker
+// Search Marker based on name, URI: /marker?name=MY_QUERY
 router.get("/marker", (req, res, next) => {
   
   markerSchema.find({ "name" :  {'$regex': new RegExp(req.query.name, "i")}}, (error, data) => {
@@ -34,7 +33,7 @@ router.get("/marker", (req, res, next) => {
 
 
 //Create marker
-router.post("/marker/", (req, res, next) => {
+router.post("/marker/", authorize, (req, res, next) => {
   console.log(req.body);
   const marker = new markerSchema({
     name: req.body.name,

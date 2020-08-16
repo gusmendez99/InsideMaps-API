@@ -6,8 +6,7 @@ const authorize = require("../middlewares/auth");
 
  
 // Get Users
-//router.route('/user/').get(authorize, (req, res) ...
-router.route('/user/').get((req, res) => {
+router.route('/user/').get(authorize, (req, res) => {
     userSchema.find((error, response) => {
         if (error) {
             return next(error)
@@ -31,7 +30,7 @@ router.route('/user/:id').get(authorize, (req, res, next) => {
 })
 
 // Update User
-router.route('/user/:id').put((req, res, next) => {
+router.route('/user/:id').put(authorize, (req, res, next) => {
     userSchema.findByIdAndUpdate(req.params.id, {
         $set: req.body
     }, (error, data) => {
@@ -47,7 +46,7 @@ router.route('/user/:id').put((req, res, next) => {
 
 
 // Delete User
-router.route('/user/:id').delete((req, res, next) => {
+router.route('/user/:id').delete(authorize, (req, res, next) => {
     userSchema.findByIdAndRemove(req.params.id, (error, data) => {
         if (error) {
             return next(error);

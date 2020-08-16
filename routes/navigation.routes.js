@@ -7,7 +7,7 @@ const authorize = require("../middlewares/auth");
 const mongoose = require('mongoose');
 const findShortestPath = require('../utils/navigation.utils');
 
-// Get Markers of a single Map
+// Search a place based on start and end Marker of a single Map
 router.post("/navigation/find-shortest-path/:id", (req, res, next) => {
     const {startNode, endNode } = req.body;
 
