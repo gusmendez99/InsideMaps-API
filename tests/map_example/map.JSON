@@ -1,7 +1,7 @@
 {
     "map":{
         "name":"apartamentos 101",
-        "description": "Edificio de apartamentos, prueba de mapeo",
+        "description": "Edificio de apartamentos mapa oficial",
         "id_place": "16fsd78sd77f",
         "level": 1,
         "year": 1,
@@ -352,7 +352,7 @@
 	        "type": "node",
 	        "name": "stairs node 5",
 	        "img": "none.png",
-	        "coordinates": [0, 2.858,2.9],
+	        "coordinates": [0, 2.858,4.3],
 	        "level": 2,
 	        "associates": {
                 "19": 3.2729,
@@ -363,7 +363,7 @@
 	        "type": "node",
 	        "name": "stairs node 6",
 	        "img": "none.png",
-	        "coordinates": [-1.205, 2.858,2.9],
+	        "coordinates": [-1.205, 2.858,4.3],
 	        "level": 1,
 	        "associates": {
                 "31": 1.205,
