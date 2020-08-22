@@ -1,0 +1,142 @@
+{
+    "route": "https://inside-maps-api.herokuapp.com/api/v1/navigation/find-shortest-path/5f3b4d956800cf00246bf2cf/",
+    "method": "post",
+    "first_test":{
+        "input":{
+            "startNode" : 1,
+            "endNode" : 44
+        },
+        "output":{
+            "message": "Shortest path retrieved successfully",
+            "result": {
+                "distance": 27.9913,
+                "path": [
+                    1,
+                    "2",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "31",
+                    "32",
+                    "33",
+                    "34",
+                    "36",
+                    "39",
+                    "42",
+                    44
+                ]
+            }
+        },
+        "expected":{
+            "message": "Shortest path retrieved successfully",
+            "result": {
+                "distance": 27.9913,
+                "path": [
+                    1,
+                    "2",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "31",
+                    "32",
+                    "33",
+                    "34",
+                    "36",
+                    "39",
+                    "42",
+                    44
+                ]
+            }
+        },
+        "result": true
+    },
+    "second_test":{
+        "input":{
+            "startNode" : 17,
+            "endNode" : 34
+        },
+        "output":{
+            "message": "Shortest path retrieved successfully",
+            "result": {
+                "distance": 13.6053,
+                "path": [
+                    17,
+                    "18",
+                    "19",
+                    "31",
+                    "32",
+                    "33",
+                    34
+                ]
+            }
+        },
+        "expected":{
+            "message": "Shortest path retrieved successfully",
+            "result": {
+                "distance": 13.6053,
+                "path": [
+                    17,
+                    "18",
+                    "19",
+                    "31",
+                    "32",
+                    "33",
+                    34
+                ]
+            }
+        },
+        "result": true
+    },
+    "third_test":{
+        "input":{
+            "startNode" : 42,
+            "endNode" : 1
+        },
+        "output":{
+            "message": "Shortest path retrieved successfully",
+            "result": {
+                "distance": 27.401299999999996,
+                "path": [
+                    42,
+                    "39",
+                    "36",
+                    "34",
+                    "33",
+                    "32",
+                    "31",
+                    "19",
+                    "18",
+                    "17",
+                    "16",
+                    "2",
+                    1
+                ]
+            }
+        },
+        "expected":{
+            "message": "Shortest path retrieved successfully",
+            "result": {
+                "distance": 27.401299999999996,
+                "path": [
+                    42,
+                    "39",
+                    "36",
+                    "34",
+                    "33",
+                    "32",
+                    "31",
+                    "19",
+                    "18",
+                    "17",
+                    "16",
+                    "2",
+                    1
+                ]
+            }
+        },
+        "result": true
+    }
+
+}
