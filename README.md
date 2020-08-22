@@ -11,6 +11,7 @@ Node Token-based Authentication REST APIs for Inside Maps Project. Software Engi
   - [Installation](#installation)
     - [Clone](#clone)
     - [Setup](#setup)
+  - [- Open terminal run `yarn start`](#ulliopen-terminal-run-yarn-startliul)
   - [Features](#features)
   - [Routes](#routes)
   - [Team](#team)
@@ -73,7 +74,7 @@ Here are the main routes used in the API
    * Get Markers (GET)
       * http://localhost:4000/api/v1/markers/  
    * Get Markers by Name (GET)
-      * http://localhost:4000/api/v1/marker/?name=nameToSearch/ 
+      * http://localhost:4000/api/v1/marker/?name=SEARCH_TERM&map=MAP_ID/ 
    * Create Marker (POST)
       * http://localhost:4000/api/v1/marker/      
 * Navigation

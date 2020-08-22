@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const markerSchema = require("../models/Markers");
+const mapSchema = require("../models/Maps");
 const authorize = require("../middlewares/auth");
 const { request } = require("express");
 
@@ -16,19 +17,34 @@ router.route("/markers/").get(authorize, (req, res) => {
   });
 });
 
-// Search Marker based on name, URI: /marker?name=MY_QUERY
+// Search Marker based on name, URI: /marker?name=MY_QUERY&map=MAP_ID
 router.get("/marker", (req, res, next) => {
-  
-  markerSchema.find({ "name" :  {'$regex': new RegExp(req.query.name, "i")}}, (error, data) => {
+
+  mapSchema.findById(req.query.map, (error, data) => {
     if (error) {
       return next(error);
-    } else {
-      res.status(200).json({
-        message: "Markers retrieved successfully",
-        result: data,
-      });
+    } else {   
+      // Checks if map exists
+      if(data != null) {
+        markerSchema.find({ "name" :  {'$regex': new RegExp(req.query.name, "i")}, 
+              "map_id": req.query.map}, (error, data) => {
+          if (error) {
+            return next(error);
+          } else {
+            res.status(200).json({
+              message: "Markers retrieved successfully",
+              result: data,
+            });
+          }
+        });
+      } else {
+        res.status(404).json({
+          message: "Map does not exist"
+        });
+      }
     }
   });
+  
 });
 
 
