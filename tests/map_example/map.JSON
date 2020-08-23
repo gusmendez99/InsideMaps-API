@@ -17,7 +17,8 @@
     "markers":{
 		"1": {
 	        "type": "node",
-	        "name": "garage node 1",
+			"name": "garage node 1",
+			"node_id": "1",
 	        "img": "none.png",
 	        "coordinates": [2.56e-2, -0.538,0.0],
 	        "level": 1,
@@ -29,7 +30,8 @@
         },
         "2": {
 	        "type": "door",
-	        "name": "stairs door 1",
+			"name": "stairs door 1",
+			"node_id": "2",
 	        "img": "none.png",
 	        "coordinates": [0,0,0],
 	        "level": 1,
@@ -40,7 +42,8 @@
         },
         "3": {
 	        "type": "node",
-	        "name": "garage node 2",
+			"name": "garage node 2",
+			"node_id": "3",
 	        "img": "none.png",
 	        "coordinates": [-3.589, -0.525,0.0],
 	        "level": 1,
@@ -52,7 +55,8 @@
         "4": {
 	        "type": "door",
 	        "name": "garage door",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "4",
 	        "coordinates": [0, -4.64,0.0],
 	        "level": 1,
 	        "associates": {
@@ -63,7 +67,8 @@
         "5": {
 	        "type": "node",
 	        "name": "outside node 1",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "5",
 	        "coordinates": [-0.923, -6.934,0.0],
 	        "level": 1,
 	        "associates": {
@@ -73,7 +78,8 @@
         "6": {
 	        "type": "door",
 	        "name": "inside door 1",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "6",
 	        "coordinates": [-3.601, 0,0.0],
 	        "level": 1,
 	        "associates": {
@@ -84,7 +90,8 @@
         "7": {
 	        "type": "node",
 	        "name": "inside node 1",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "7",
 	        "coordinates": [-3.345, 1.269,0.0],
 	        "level": 1,
 	        "associates": {
@@ -98,7 +105,8 @@
         "8": {
 	        "type": "element",
 	        "name": "table",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "8",
 	        "coordinates": [-4.857, 1.192,0.0],
 	        "level": 1,
 	        "associates": {
@@ -108,7 +116,8 @@
         "9": {
 	        "type": "element",
 	        "name": "sink",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "9",
 	        "coordinates": [-2.268, 0.679,0.0],
 	        "level": 1,
 	        "associates": {
@@ -118,7 +127,8 @@
         "10": {
 	        "type": "element",
 	        "name": "oven",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "10",
 	        "coordinates": [-2.294, 1.910,0.0],
 	        "level": 1,
 	        "associates": {
@@ -128,7 +138,8 @@
         "11": {
 	        "type": "node",
 	        "name": "inside node 2",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "11",
 	        "coordinates": [-3.409, 2.820,0.0],
 	        "level": 1,
 	        "associates": {
@@ -142,7 +153,8 @@
         "12": {
 	        "type": "element",
 	        "name": "sofa",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "12",
 	        "coordinates": [-5.114, 2.820,0.0],
 	        "level": 1,
 	        "associates": {
@@ -152,7 +164,8 @@
         "13": {
 	        "type": "element",
 	        "name": "fridge",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "13",
 	        "coordinates": [-2.166, 2.999,0.0],
 	        "level": 1,
 	        "associates": {
@@ -162,7 +175,8 @@
         "14": {
 	        "type": "element",
 	        "name": "bedroom",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "14",
 	        "coordinates": [-2.166, 2.999,0.0],
 	        "level": 1,
 	        "associates": {
@@ -172,7 +186,8 @@
         "15": {
 	        "type": "element",
 	        "name": "bathroom",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "15",
 	        "coordinates": [-3.627, 4.691,0.0],
 	        "level": 1,
 	        "associates": {
@@ -182,7 +197,8 @@
         "16": {
 	        "type": "node",
 	        "name": "stairs node 1",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "16",
 	        "coordinates": [0, 2.858,1.4],
 	        "level": 1,
 	        "associates": {
@@ -193,7 +209,8 @@
         "17": {
 	        "type": "node",
 	        "name": "stairs node 2",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "17",
 	        "coordinates": [-1.205, 2.858,1.4],
 	        "level": 1,
 	        "associates": {
@@ -204,7 +221,8 @@
         "18": {
 	        "type": "node",
 	        "name": "stairs node 3",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "18",
 	        "coordinates": [-1.141, -0.487,2.8],
 	        "level": 2,
 	        "associates": {
@@ -216,7 +234,8 @@
         "19": {
 	        "type": "node",
 	        "name": "stairs node 4",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "19",
 	        "coordinates": [0, -0.487,2.8],
 	        "level": 2,
 	        "associates": {
@@ -227,7 +246,8 @@
         "20": {
 	        "type": "door",
 	        "name": "stairs door 2",
-	        "img": "none.png",
+			"img": "none.png",
+			"node_id": "20",
 	        "coordinates": [-1.141, -1.128,2.8],
 	        "level": 2,
 	        "associates": {
@@ -240,6 +260,7 @@
 	        "type": "element",
 	        "name": "living room 1",
 	        "img": "none.png",
+			"node_id": "21",
 	        "coordinates": [-0.987, -2.781,2.8],
 	        "level": 2,
 	        "associates": {
@@ -251,6 +272,7 @@
 	        "type": "node",
 	        "name": "insdie node 3",
 	        "img": "none.png",
+			"node_id": "22",
 	        "coordinates": [-2.384, -2.781,2.8],
 	        "level": 2,
 	        "associates": {
@@ -265,6 +287,7 @@
 	        "type": "element",
 	        "name": "dining room 1",
 	        "img": "none.png",
+			"node_id": "23",
 	        "coordinates": [-4.627, -4.447,2.8],
 	        "level": 2,
 	        "associates": {
@@ -276,6 +299,7 @@
 	        "type": "element",
 	        "name": "kitchen 1",
 	        "img": "none.png",
+			"node_id": "24",
 	        "coordinates": [-4.383, -2.371,2.8],
 	        "level": 2,
 	        "associates": {
@@ -287,6 +311,7 @@
 	        "type": "node",
 	        "name": "insdie node 4",
 	        "img": "none.png",
+			"node_id": "25",
 	        "coordinates": [-2.397, 0.615,2.8],
 	        "level": 2,
 	        "associates": {
@@ -300,6 +325,7 @@
 	        "type": "element",
 	        "name": "bedroom 1.1",
 	        "img": "none.png",
+			"node_id": "26",
 	        "coordinates": [-2.012, 0.359,2.8],
 	        "level": 2,
 	        "associates": {
@@ -310,6 +336,7 @@
 	        "type": "element",
 	        "name": "bedroom 1.2",
 	        "img": "none.png",
+			"node_id": "27",
 	        "coordinates": [-3.025, 0.859,2.8],
 	        "level": 2,
 	        "associates": {
@@ -320,6 +347,7 @@
 	        "type": "node",
 	        "name": "inside node 5",
 	        "img": "none.png",
+			"node_id": "28",
 	        "coordinates": [-2.409, 3.999,2.8],
 	        "level": 2,
 	        "associates": {
@@ -332,6 +360,7 @@
 	        "type": "element",
 	        "name": "bedroom 1.3",
 	        "img": "none.png",
+			"node_id": "29",
 	        "coordinates": [-3.063, 4.024,2.8],
 	        "level": 2,
 	        "associates": {
@@ -342,6 +371,7 @@
 	        "type": "element",
 	        "name": "bedroom 1.4",
 	        "img": "none.png",
+			"node_id": "30",
 	        "coordinates": [-1.781, 3.986,2.8],
 	        "level": 2,
 	        "associates": {
@@ -352,6 +382,7 @@
 	        "type": "node",
 	        "name": "stairs node 5",
 	        "img": "none.png",
+			"node_id": "31",
 	        "coordinates": [0, 2.858,4.3],
 	        "level": 2,
 	        "associates": {
@@ -363,6 +394,7 @@
 	        "type": "node",
 	        "name": "stairs node 6",
 	        "img": "none.png",
+			"node_id": "32",
 	        "coordinates": [-1.205, 2.858,4.3],
 	        "level": 1,
 	        "associates": {
@@ -374,6 +406,7 @@
 	        "type": "node",
 	        "name": "stairs node 7",
 	        "img": "none.png",
+			"node_id": "33",
 	        "coordinates": [-1.141, -0.487,5.8],
 	        "level": 3,
 	        "associates": {
@@ -385,6 +418,7 @@
 	        "type": "door",
 	        "name": "stairs door 3",
 	        "img": "none.png",
+			"node_id": "34",
 	        "coordinates": [-1.141, -1.128,5.8],
 	        "level": 3,
 	        "associates": {
@@ -397,6 +431,7 @@
 	        "type": "element",
 	        "name": "living room 2",
 	        "img": "none.png",
+			"node_id": "35",
 	        "coordinates": [-0.987, -2.781,5.8],
 	        "level": 3,
 	        "associates": {
@@ -408,6 +443,7 @@
 	        "type": "node",
 	        "name": "insdie node 6",
 	        "img": "none.png",
+			"node_id": "36",
 	        "coordinates": [-2.384, -2.781,5.8],
 	        "level": 3,
 	        "associates": {
@@ -422,6 +458,7 @@
 	        "type": "element",
 	        "name": "dining room 2",
 	        "img": "none.png",
+			"node_id": "37",
 	        "coordinates": [-4.627, -4.447,5.8],
 	        "level": 3,
 	        "associates": {
@@ -433,6 +470,7 @@
 	        "type": "element",
 	        "name": "kitchen 2",
 	        "img": "none.png",
+			"node_id": "38",
 	        "coordinates": [-4.383, -2.371,5.8],
 	        "level": 3,
 	        "associates": {
@@ -444,6 +482,7 @@
 	        "type": "node",
 	        "name": "insdie node 7",
 	        "img": "none.png",
+			"node_id": "39",
 	        "coordinates": [-2.397, 0.615,5.8],
 	        "level": 3,
 	        "associates": {
@@ -457,6 +496,7 @@
 	        "type": "element",
 	        "name": "bedroom 2.1",
 	        "img": "none.png",
+			"node_id": "40",
 	        "coordinates": [-2.012, 0.359,5.8],
 	        "level": 3,
 	        "associates": {
@@ -467,6 +507,7 @@
 	        "type": "element",
 	        "name": "bedroom 2.2",
 	        "img": "none.png",
+			"node_id": "41",
 	        "coordinates": [-3.025, 0.859,5.8],
 	        "level": 3,
 	        "associates": {
@@ -477,6 +518,7 @@
 	        "type": "node",
 	        "name": "inside node 8",
 	        "img": "none.png",
+			"node_id": "42",
 	        "coordinates": [-2.409, 3.999,5.8],
 	        "level": 3,
 	        "associates": {
@@ -489,6 +531,7 @@
 	        "type": "element",
 	        "name": "bedroom 2.3",
 	        "img": "none.png",
+			"node_id": "43",
 	        "coordinates": [-3.063, 4.024,5.8],
 	        "level": 3,
 	        "associates": {
@@ -499,6 +542,7 @@
 	        "type": "element",
 	        "name": "bedroom 2.4",
 	        "img": "none.png",
+			"node_id": "44",
 	        "coordinates": [-1.781, 3.986,5.8],
 	        "level": 3,
 	        "associates": {
