@@ -1,3 +1,5 @@
+const markerSchema = require("../models/Markers");
+
 const shortestDistanceNode = (distances, visited) => {
 	let shortest = null;
 
@@ -68,10 +70,20 @@ const findShortestPath = (graph, startNode, endNode) => {
 	}
 	shortestPath.reverse();
 
+	let path =[]
+
+	for( const item in shortestPath){
+		info = markerSchema.find({node_id: item}).exec();
+		path.push({
+			name: item.name,
+			coordinates: item.coordinates,
+		})
+	}
+
 	// return the shortest path from start node to end node & its distance
 	let results = {
 		distance: distances[endNode],
-		path: shortestPath,
+		path: path,
 	};
 
 	return results;
