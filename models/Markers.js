@@ -11,6 +11,9 @@ let markerSchema = new Schema({
     name : {
         type: String
     },
+    node_id:{
+        type: Number
+    },
     img: {
         type: String
     },
