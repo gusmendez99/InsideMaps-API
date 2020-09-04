@@ -82,7 +82,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest7-report.csv</stringProp>
+            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest8-report.csv</stringProp>
           </ResultCollector>
           <hashTree/>
           <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
@@ -162,7 +162,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest7-report.csv</stringProp>
+            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest8-report.csv</stringProp>
           </ResultCollector>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
@@ -199,7 +199,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest7-report.csv</stringProp>
+            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest8-report.csv</stringProp>
           </ResultCollector>
           <hashTree/>
           <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
@@ -236,7 +236,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest7-report.csv</stringProp>
+            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest8-report.csv</stringProp>
           </ResultCollector>
           <hashTree/>
           <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
@@ -273,7 +273,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest7-report.csv</stringProp>
+            <stringProp name="filename">/home/thecoder/Documentos/UVG/Software/InsideMaps-API/tests/Stress_tests/Stres-Trest8-report.csv</stringProp>
           </ResultCollector>
           <hashTree/>
           <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
