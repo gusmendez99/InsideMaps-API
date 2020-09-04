@@ -9890,4 +9890,48 @@ timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success
 1599179294884,116644,Main Test,200,OK,Thread Group 1 1-1118,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,116644,0,44836
 1599179295050,134921,Main Test,200,OK,Thread Group 1 1-1251,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,134921,0,44670
 1599179306576,69393,Main Test,200,OK,Thread Group 1 1-3639,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,69393,0,17600
-1599179294367,272987,Main Test,Non HTTP response code: java.net.SocketTimeoutExcep
+1599179294367,272987,Main Test,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,Thread Group 1 1-577,text,false,,2993,0,3927,3927,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,0,0,29897
+1599179296133,77978,Main Test,200,OK,Thread Group 1 1-2132,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,77978,0,28105
+1599179322969,51142,Main Test,200,OK,Thread Group 1 1-3006,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,51142,0,1269
+1599179298219,75892,Main Test,200,OK,Thread Group 1 1-3914,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,75892,0,26016
+1599179322122,51990,Main Test,200,OK,Thread Group 1 1-2886,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,51989,0,2111
+1599179306766,67346,Main Test,200,OK,Thread Group 1 1-2192,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,67346,0,17466
+1599179322964,51148,Main Test,200,OK,Thread Group 1 1-1256,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,51148,0,1259
+1599179295031,79081,Main Test,200,OK,Thread Group 1 1-1243,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,79081,0,29195
+1599179297271,76841,Main Test,200,OK,Thread Group 1 1-3143,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,76841,0,26955
+1599179294255,79857,Main Test,200,OK,Thread Group 1 1-460,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,79857,0,29968
+1599179322961,51151,Main Test,200,OK,Thread Group 1 1-5165,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,51151,0,1262
+1599179322960,51152,Main Test,200,OK,Thread Group 1 1-1707,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,51152,0,1261
+1599179322969,51143,Main Test,200,OK,Thread Group 1 1-2405,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,51143,0,1252
+1599179294557,79555,Main Test,200,OK,Thread Group 1 1-754,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,79555,0,29664
+1599179322962,51150,Main Test,200,OK,Thread Group 1 1-1803,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,51150,0,1259
+1599179322969,51143,Main Test,200,OK,Thread Group 1 1-646,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,51143,0,1252
+1599179294249,81719,Main Test,200,OK,Thread Group 1 1-316,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,81719,0,29966
+1599179296295,77817,Main Test,200,OK,Thread Group 1 1-2258,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,77817,0,27920
+1599179324215,51753,Main Test,200,OK,Thread Group 1 1-449,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,51753,0,0
+1599179294270,79842,Main Test,200,OK,Thread Group 1 1-470,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,79842,0,29951
+1599179294538,69276,Main Test,200,OK,Thread Group 1 1-730,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,69276,0,30268
+1599179298351,65462,Main Test,200,OK,Thread Group 1 1-4095,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,65462,0,26456
+1599179297006,66807,Main Test,200,OK,Thread Group 1 1-2839,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,66807,0,27800
+1599179298278,65535,Main Test,200,OK,Thread Group 1 1-4014,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,65535,0,26529
+1599179298230,65583,Main Test,200,OK,Thread Group 1 1-3932,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,65583,0,26577
+1599179296232,67581,Main Test,200,OK,Thread Group 1 1-2207,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,67581,0,28575
+1599179297073,66740,Main Test,200,OK,Thread Group 1 1-2910,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,66740,0,27734
+1599179294404,69409,Main Test,200,OK,Thread Group 1 1-622,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,69409,0,30402
+1599179294307,452513,Main Test,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,Thread Group 1 1-509,text,false,,2993,0,3912,3912,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,0,0,29960
+1599179294420,69393,Main Test,200,OK,Thread Group 1 1-276,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,69393,0,30386
+1599179294395,69418,Main Test,200,OK,Thread Group 1 1-616,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,69418,0,30411
+1599179298170,65643,Main Test,200,OK,Thread Group 1 1-3832,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,65643,0,26636
+1599179298152,65661,Main Test,200,OK,Thread Group 1 1-3802,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,65661,0,26654
+1599179294392,69421,Main Test,200,OK,Thread Group 1 1-612,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,69421,0,30414
+1599179295231,68582,Main Test,200,OK,Thread Group 1 1-1456,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,68582,0,29575
+1599179295189,68624,Main Test,200,OK,Thread Group 1 1-1397,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,68624,0,29617
+1599179295778,68035,Main Test,200,OK,Thread Group 1 1-1882,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,68035,0,29028
+1599179306405,439985,Main Test,Non HTTP response code: javax.net.ssl.SSLHandshakeException,Non HTTP response message: Remote host terminated the handshake,Thread Group 1 1-5267,text,false,,2858,0,3912,3912,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,0,0,439985
+1599179294368,69445,Main Test,200,OK,Thread Group 1 1-578,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,69445,0,30438
+1599179296176,67637,Main Test,200,OK,Thread Group 1 1-2166,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,67637,0,28631
+1599179294656,69157,Main Test,200,OK,Thread Group 1 1-851,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,69157,0,30151
+1599179295468,451352,Main Test,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,Thread Group 1 1-1669,text,false,,2993,0,3912,3912,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,0,0,28796
+1599179294285,69528,Main Test,200,OK,Thread Group 1 1-486,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,69528,0,30522
+1599179295060,68753,Main Test,200,OK,Thread Group 1 1-1260,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5f41473baea6570024e0e8bf,68753,0,29747
+1599179296097,67716,Main Test,200,OK,Thread Group 1 1-2103,text,true,,1895,166,3936,3936,https://inside-maps-api.herokuapp.com/api/v1/map/5
