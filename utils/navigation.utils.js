@@ -69,18 +69,19 @@ const findShortestPath = async (graph, startNode, endNode) => {
 		parent = parents[parent];
 	}
 	shortestPath.reverse();
+	let path = []
 
-	let path =[]
-
-	for( const nodeId in shortestPath){
-		await markerSchema.find({node_id: nodeId.toString()}).exec().then((markerNodes) => {
-			if(markerNodes[0]) {
-				path.push({
-					id: nodeId,
-					node: markerNodes[0]
-				})
+	for(let index = 0; index < shortestPath.length; index++){
+		await markerSchema.find({node_id: shortestPath[index]}, (err, result) => {
+			if(!err){
+				if(result[0]) {
+					path.push({
+						id: shortestPath[index],
+						node: result[0]
+					})
+				}
 			}
-		});
+		})
 		
 		
 	}
