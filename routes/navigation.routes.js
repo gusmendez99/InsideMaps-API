@@ -18,12 +18,18 @@ router.post("/navigation/find-shortest-path/:id", (req, res, next) => {
 
         const graph = JSON.parse(JSON.stringify(data.graph));
 
-        const path = findShortestPath(graph, startNode, endNode);
-        
-        res.status(200).json({
-          message: "Shortest path retrieved successfully",
-          result: path,
+        findShortestPath(graph, startNode, endNode).then(path => {
+          res.status(200).json({
+            message: "Shortest path retrieved successfully",
+            result: path,
+          });
+        }).catch(e => {
+          res.status(500).json({
+            message: "Error retriving shortest path"
+          });
         });
+        
+        
       }
     });
 });
