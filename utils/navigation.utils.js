@@ -73,7 +73,7 @@ const findShortestPath = (graph, startNode, endNode) => {
 	let path =[]
 
 	for( const item in shortestPath){
-		info = markerSchema.find({node_id: item}).exec();
+		info = markerSchema.find({node_id: parseInt(item)}).exec();
 		path.push({
 			name: item.name,
 			coordinates: item.coordinates,
