@@ -13,7 +13,7 @@ const shortestDistanceNode = (distances, visited) => {
 	return shortest;
 };
 
-const findShortestPath = (graph, startNode, endNode) => {
+const findShortestPath = async (graph, startNode, endNode) => {
 	// establish object for recording distances from the start node
 	let distances = {};
 	distances[endNode] = "Infinity";
@@ -72,12 +72,17 @@ const findShortestPath = (graph, startNode, endNode) => {
 
 	let path =[]
 
-	for( const item in shortestPath){
-		info = markerSchema.find({node_id: parseInt(item)}).exec();
-		path.push({
-			name: item.name,
-			coordinates: item.coordinates,
-		})
+	for( const nodeId in shortestPath){
+		await markerSchema.find({node_id: nodeId.toString()}).exec().then((markerNodes) => {
+			if(markerNodes[0]) {
+				path.push({
+					id: nodeId,
+					node: markerNodes[0]
+				})
+			}
+		});
+		
+		
 	}
 
 	// return the shortest path from start node to end node & its distance
