@@ -238,3 +238,42 @@ describe('GET map', function(){
     done()
   })
 })
+
+//TEST LOGING
+const getLoging = function(email,password ,callback){
+    request
+    .get(`https://inside-maps-api.herokuapp.com/api/v1/auth/signin/`)
+    .end(function(error,  res){
+      if(!error){
+        let maps = res.body.map(function(map){
+          return map
+        });
+        callback(null,maps);
+      }else{
+        callback('Error Ocurred');
+      }
+    })
+  }
+
+  describe('Post logging', function(){
+    beforeEach(function(){
+      let signinResponse ={
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZWEzYjQyMmRkMDQ3MTUyMThjMDZkOWUiLCJyb2xlIjoyLCJpYXQiOjE1OTk1ODUzMjIsImV4cCI6MTU5OTU4ODkyMn0.fnQUlxlj-h5SsBoAtuFdhLwzn44ojreyeTakdMtvUqM",
+            "expiresIn": 3600,
+            "_id": "5ea3b422dd04715218c06d9e"
+        }
+  
+    nock('https://inside-maps-api.herokuapp.com')
+    .get('/api/v1/auth/signin/',{email:'gus@gmail.com', password:'12345'})
+    .reply(200, signinResponse)
+    });
+  
+    it('returns logging of user gus@gmail.com', function(done){
+      const email = 'gus@gmail.com'
+      const password = '12345'
+      getLoging(email,password ,function(err,user){
+        expect(Array.isArray(user)).to.equal(false)
+      })
+      done()
+    })
+  })
