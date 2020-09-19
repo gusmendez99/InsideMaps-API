@@ -106,6 +106,11 @@ router.post("/auth/signin", (req, res, next) => {
         let jwtToken = jwt.sign({
             email: getUser.email,
             userId: getUser._id,
+            firstname: getUser.firstname,
+            lastname: getUser.lastname,
+            gender: getUser.gender,
+            age: getUser.age,
+            username: getUser.username,
             role: getUser.role,
         }, "secret-key", {
             expiresIn: "1h"
