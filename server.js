@@ -17,6 +17,7 @@ const userRouter = require('./routes/user.routes');
 const mapRouter = require('./routes/maps.routes')
 const markerRouter = require('./routes/markers.routes');
 const navigationRouter = require('./routes/navigation.routes');
+const errorReportRouter = require('./routes/errorReports.routes')
 
 // MongoDB conection
 mongoose.Promise = global.Promise;
@@ -51,6 +52,7 @@ app.use(API_VERSION, userRouter)
 app.use(API_VERSION, mapRouter)
 app.use(API_VERSION, markerRouter)
 app.use(API_VERSION, navigationRouter)
+app.use(API_VERSION, errorReportRouter)
 
 // Define PORT
 const port = process.env.PORT || 4000;
