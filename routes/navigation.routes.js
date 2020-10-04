@@ -35,12 +35,10 @@ router.post("/navigation/find-shortest-path/:id", (req, res, next) => {
         const token = req.get('Authorization').replace("JWT ", "")
         const user_id = jwt.decode(token).userId
         const destination_id = endNode
-        const distance_traveled = path.distance
         const log = new logbookSchema({
           date,
           user_id,
           destination_id,
-          distance_traveled,
         })
         log.save()
         
