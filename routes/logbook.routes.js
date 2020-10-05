@@ -3,7 +3,6 @@ const express = require("express");
 const router = express.Router();
 const logbookSchema = require("../models/Logbook")
 const mongoose = require('mongoose');
-const { model } = require("../models/Logbook");
 
 //Get the history of a user
 router.route("/logbook/:userId").get((req, res, next)=>{
