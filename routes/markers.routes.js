@@ -70,6 +70,24 @@ router.post("/marker/", authorize, (req, res, next) => {
     });
 });
 
+//Update marker
+router.route("/marker/:id").put(authorize, (req, res, next) => {
+  markerSchema.findByIdAndUpdate(
+    req.params.id,
+    {
+      $set: req.body,
+    },
+    (error, data) => {
+      if (error) {
+        console.log(error);
+        return next(error);
+      } else {
+        res.json(data);
+        console.log("Marker successfully updated!");
+      }
+    }
+  );
+});
 
 
 module.exports = router;
