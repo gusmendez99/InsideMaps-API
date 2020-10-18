@@ -11,6 +11,7 @@ const { check, validationResult } = require('express-validator');
 //Admin SignUp pending...
 const ADMIN_ROLE = 1;
 const USER_ROLE = 2;
+const GUEST_ROLE = 3;
 
 // Sign-up
 router.post("/auth/signup",
@@ -97,6 +98,51 @@ router.post("/auth/signin", (req, res, next) => {
         }
         getUser = user;
         return bcrypt.compare(req.body.password, user.password);
+    }).then(response => {
+        if (!response) {
+            return res.status(401).json({
+                message: "Authentication failed"
+            });
+        }
+        let jwtToken = jwt.sign({
+            email: getUser.email,
+            userId: getUser._id,
+            firstname: getUser.firstname,
+            lastname: getUser.lastname,
+            gender: getUser.gender,
+            age: getUser.age,
+            username: getUser.username,
+            role: getUser.role,
+        }, "secret-key", {
+            expiresIn: "1h"
+        });
+        res.status(200).json({
+            token: jwtToken,
+            expiresIn: 3600,
+            _id: getUser._id
+        });
+    }).catch(err => {
+        return res.status(401).json({
+            message: "Authentication failed"
+        });
+    });
+});
+
+
+// Sign-in
+router.post("/auth/signin-as-guest", (req, res, next) => {
+    let getUser;
+    userSchema.findOne({
+        role: GUEST_ROLE
+    }).then(user => {
+        if (!user) {
+            return res.status(401).json({
+                message: "Authentication failed"
+            });
+        }
+        getUser = user;
+        // Just to allow guest user, we need to compare same password to get a valid response
+        return bcrypt.compare(user.password, user.password);
     }).then(response => {
         if (!response) {
             return res.status(401).json({
