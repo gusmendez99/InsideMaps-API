@@ -32,11 +32,17 @@ router.post("/navigation/find-shortest-path/:id", (req, res, next) => {
         });
         //saving the activity in the logbook
         const date = new Date()
+        const year = date.getFullYear()
+        const month = date.getMonth() + 1
+        const day = date.getDay()
         const token = req.get('Authorization').replace("JWT ", "")
         const user_id = jwt.decode(token).userId
+        console.log(date.getMonth())
         const destination_id = endNode
         const log = new logbookSchema({
-          date,
+          year,
+          month,
+          day,
           user_id,
           destination_id,
         })
