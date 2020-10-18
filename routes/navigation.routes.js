@@ -34,7 +34,7 @@ router.post("/navigation/find-shortest-path/:id", (req, res, next) => {
         const date = new Date()
         const year = date.getFullYear()
         const month = date.getMonth() + 1
-        const day = date.getDay()
+        const day = date.getDate()
         const token = req.get('Authorization').replace("JWT ", "")
         const user_id = jwt.decode(token).userId
         console.log(date.getMonth())
