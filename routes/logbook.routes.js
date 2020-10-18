@@ -22,7 +22,7 @@ router.route("/logbook/:userId").get((req, res, next)=>{
 });
 
 //Number of visits per local
-router.route('/logbook/stats/most_visited').get((req, res, next) => {
+router.route('/logbook/stats/most-visited').get((req, res, next) => {
     logbookSchema.aggregate().
         group({_id:'$destination_id', times_visited: {$sum: 1}}).
         exec(function(err, data) {
@@ -37,7 +37,7 @@ router.route('/logbook/stats/most_visited').get((req, res, next) => {
 })
 
 //Number of visits on a month
-router.route('/logbook/stats/visits_per_month').get((req, res, next) =>{
+router.route('/logbook/stats/visits-per-month').get((req, res, next) =>{
     logbookSchema.aggregate().
         group({_id:{'month':'$month','destination_id':'$destination_id'}, times_visited: {$sum: 1}}).
         exec(function(error, data){
