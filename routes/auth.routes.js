@@ -135,20 +135,16 @@ router.post("/auth/signin-as-guest", (req, res, next) => {
     userSchema.findOne({
         role: GUEST_ROLE
     }).then(user => {
+        console.log("User is: ", user)
         if (!user) {
             return res.status(401).json({
                 message: "Authentication failed"
             });
         }
         getUser = user;
-        // Just to allow guest user, we need to compare same password to get a valid response
-        return bcrypt.compare(user.password, user.password);
-    }).then(response => {
-        if (!response) {
-            return res.status(401).json({
-                message: "Authentication failed"
-            });
-        }
+        // Just to allow guest user, we don't need to compare same password to get a valid response
+        // return bcrypt.compare(getUser.password, user.password);
+
         let jwtToken = jwt.sign({
             email: getUser.email,
             userId: getUser._id,
