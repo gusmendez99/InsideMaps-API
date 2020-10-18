@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const { response } = require("express");
 
 //Get all error reports
-router.route("/errorReport").get((req, res)=>{
+router.route("/error-report").get((req, res)=>{
     errorReportSchema.find((error, response) => {
         if(error){
             return next(error)
@@ -18,7 +18,7 @@ router.route("/errorReport").get((req, res)=>{
 })
 
 //Get all error reports of a user
-router.route("/errorReport/:userId").get((req, res, next)=>{
+router.route("/error-report/:userId").get((req, res, next)=>{
 
     const userId = req.params.userId;
 
@@ -36,7 +36,7 @@ router.route("/errorReport/:userId").get((req, res, next)=>{
 });
 
 //Post an error report
-router.post("/errorReport/", authorize, (req, res, next) => {
+router.post("/error-report/", authorize, (req, res, next) => {
 
     const date = new Date();
     const token = req.get('Authorization').replace("JWT ","")
