@@ -39,7 +39,7 @@ router.route('/logbook/stats/most_visited').get((req, res, next) => {
 //Number of visits on a month
 router.route('/logbook/stats/visits_per_month').get((req, res, next) =>{
     logbookSchema.aggregate().
-        group({_id:{'date':'$date','destination_id':'$destination_id'}, times_visited: {$sum: 1}}).
+        group({_id:{'month':'$month','destination_id':'$destination_id'}, times_visited: {$sum: 1}}).
         exec(function(error, data){
             if(error){
                 return next(error);

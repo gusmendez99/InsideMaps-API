@@ -4,8 +4,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let logbookSchema = new Schema({
-    date :{
-        type: Date
+    year :{
+        type: Number
+    },
+    month:{
+        type: Number
+    },
+    day:{
+        type: Number
     },
     user_id:{
         type: String
