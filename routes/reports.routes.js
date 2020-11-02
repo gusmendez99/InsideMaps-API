@@ -49,6 +49,11 @@ router.route("/error-report/:userId").get((req, res, next)=>{
 router.post("/error-report/", authorize, (req, res, next) => {
 
     const date = new Date();
+    if(!req.get('Authorization') || req.get('Authorization')  === undefined) {
+        res.status(401).json({
+            error: "Unauthorized", 
+        });
+    }
     const token = req.get('Authorization').replace("JWT ","")
     const user_id = jwt.decode(token).userId
     const description = req.body.description
