@@ -1,18 +1,28 @@
 const express = require("express");
 const router = express.Router();
 const errorReportSchema = require('../models/ErrorReport')
-const mongoose = require('mongoose');
+const userSchema = require("../models/User")
 const authorize = require("../middlewares/auth")
 const jwt = require('jsonwebtoken');
-const { response } = require("express");
 
 //Get all error reports
 router.route("/error-report").get((req, res)=>{
-    errorReportSchema.find((error, response) => {
+    errorReportSchema.find(async (error, data) => {
         if(error){
             return next(error)
         } else {
-            res.status(200).json(response)
+            let errorData = data
+            console.log(data)
+
+            for(let i=0; i<data.length; i++) {
+                let userFullName = "Invitado";
+                const userData = await userSchema.findById({_id: errorData[i]._doc.user_id})
+                if(userData && userData.username != "Invitado"){
+                    userFullName = `${userData.firstname} ${userData.lastname} (${userData.username})`
+                }
+                errorData[i] = {...errorData[i]._doc, name: userFullName}
+            }
+            res.status(200).json(errorData)
         }
     })
 })
