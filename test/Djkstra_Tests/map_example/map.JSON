@@ -1,553 +1,729 @@
 {
-    "map":{
-        "name":"apartamentos 101",
-        "description": "Edificio de apartamentos mapa oficial",
-        "id_place": "16fsd78sd77f",
-        "level": 1,
-        "year": 1,
-        "location":{
-            "coordinates":[
-                -90.51865405575928,
-                14.58571205294565
-            ],
-            "type": "Point"
-        },
-        "active": true    
-    },
-    "markers":{
+	"map": {
+		"name": "apartamentos 101",
+		"description": "Edificio de apartamentos mapa oficial",
+		"id_place": "16fsd78sd77f",
+		"level": 1,
+		"year": 1,
+		"location": {
+			"coordinates": [
+				-90.51865405575928,
+				14.58571205294565
+			],
+			"type": "Point"
+		},
+		"active": true
+	},
+	"markers": {
 		"1": {
-	        "type": "node",
+			"type": "node",
 			"name": "garage punto 1 nivel 1",
 			"node_id": "1",
-	        "img": "none.png",
-	        "coordinates": [2.56e-2, -0.538,0.0],
-	        "level": 1,
-	        "associates": {
-                "2": 0.538,
-                "3": 3.579,
-                "4": 3.960
-            }
-        },
-        "2": {
-	        "type": "door",
+			"img": "none.png",
+			"coordinates": [
+				2.56e-2,
+				-0.538,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"2": 0.538,
+				"3": 3.579,
+				"4": 3.960
+			}
+		},
+		"2": {
+			"type": "door",
 			"name": "puerta nivel 1",
 			"node_id": "2",
-	        "img": "none.png",
-	        "coordinates": [0,0,0],
-	        "level": 1,
-	        "associates": {
-                "1": 0.538,
-                "16": 3.228
-            }
-        },
-        "3": {
-	        "type": "node",
+			"img": "none.png",
+			"coordinates": [
+				0,
+				0,
+				0
+			],
+			"level": 1,
+			"associates": {
+				"1": 0.538,
+				"16": 3.228
+			}
+		},
+		"3": {
+			"type": "node",
 			"name": "garage punto 2 nivel 1",
 			"node_id": "3",
-	        "img": "none.png",
-	        "coordinates": [-3.589, -0.525,0.0],
-	        "level": 1,
-	        "associates": {
-                "1": 3.579,
-                "6": 0.590  
-            }
-        },
-        "4": {
-	        "type": "door",
-	        "name": "portón",
+			"img": "none.png",
+			"coordinates": [
+				-3.589,
+				-0.525,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"1": 3.579,
+				"6": 0.590
+			}
+		},
+		"4": {
+			"type": "door",
+			"name": "portón",
 			"img": "none.png",
 			"node_id": "4",
-	        "coordinates": [0, -4.64,0.0],
-	        "level": 1,
-	        "associates": {
-                "1": 3.960,
-                "5": 2.567
-            }
-        },
-        "5": {
-	        "type": "node",
-	        "name": "exterior",
+			"coordinates": [
+				0,
+				-4.64,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"1": 3.960,
+				"5": 2.567
+			}
+		},
+		"5": {
+			"type": "node",
+			"name": "exterior",
 			"img": "none.png",
 			"node_id": "5",
-	        "coordinates": [-0.923, -6.934,0.0],
-	        "level": 1,
-	        "associates": {
-	        	"4": 2.567
-            }
-        },
-        "6": {
-	        "type": "door",
-	        "name": "puerta hacia garage nivel 1",
+			"coordinates": [
+				-0.923,
+				-6.934,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"4": 2.567
+			}
+		},
+		"6": {
+			"type": "door",
+			"name": "puerta hacia garage nivel 1",
 			"img": "none.png",
 			"node_id": "6",
-	        "coordinates": [-3.601, 0,0.0],
-	        "level": 1,
-	        "associates": {
-                "3": 0.590,
-                "7": 1.240
-            }
-        },
-        "7": {
-	        "type": "node",
-	        "name": "punto 1 (nivel 1)",
+			"coordinates": [
+				-3.601,
+				0,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"3": 0.590,
+				"7": 1.240
+			}
+		},
+		"7": {
+			"type": "node",
+			"name": "punto 1 (nivel 1)",
 			"img": "none.png",
 			"node_id": "7",
-	        "coordinates": [-3.345, 1.269,0.0],
-	        "level": 1,
-	        "associates": {
-                "6": 1.240,
-                "8": 1.488,
-                "9": 1.238,
-                "10" : 1.238,
-                "11": 1.539
-            }
-        },
-        "8": {
-	        "type": "element",
-	        "name": "mesa nivel 1",
+			"coordinates": [
+				-3.345,
+				1.269,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"6": 1.240,
+				"8": 1.488,
+				"9": 1.238,
+				"10": 1.238,
+				"11": 1.539
+			}
+		},
+		"8": {
+			"type": "element",
+			"name": "mesa nivel 1",
 			"img": "none.png",
 			"node_id": "8",
-	        "coordinates": [-4.857, 1.192,0.0],
-	        "level": 1,
-	        "associates": {
-	        	"7": 1.488
-            }
-        },
-        "9": {
-	        "type": "element",
-	        "name": "lavamanos nivel 1",
+			"coordinates": [
+				-4.857,
+				1.192,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"7": 1.488
+			}
+		},
+		"9": {
+			"type": "element",
+			"name": "lavamanos nivel 1",
 			"img": "none.png",
 			"node_id": "9",
-	        "coordinates": [-2.268, 0.679,0.0],
-	        "level": 1,
-	        "associates": {
-	        	"7": 1.238
-            }
-        },
-        "10": {
-	        "type": "element",
-	        "name": "horno nivel 1",
+			"coordinates": [
+				-2.268,
+				0.679,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"7": 1.238
+			}
+		},
+		"10": {
+			"type": "element",
+			"name": "horno nivel 1",
 			"img": "none.png",
 			"node_id": "10",
-	        "coordinates": [-2.294, 1.910,0.0],
-	        "level": 1,
-	        "associates": {
-	        	"7": 1.238
-            }
-        },
-        "11": {
-	        "type": "node",
-	        "name": "punto 2 (nivel 1)",
+			"coordinates": [
+				-2.294,
+				1.910,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"7": 1.238
+			}
+		},
+		"11": {
+			"type": "node",
+			"name": "punto 2 (nivel 1)",
 			"img": "none.png",
 			"node_id": "11",
-	        "coordinates": [-3.409, 2.820,0.0],
-	        "level": 1,
-	        "associates": {
-                "7": 1.539,
-                "12": 1.205,
-                "13": 1.252,
-                "14": 1.692,
-                "15": 1.895
-            }
-        },
-        "12": {
-	        "type": "element",
-	        "name": "sofa nivel 1",
+			"coordinates": [
+				-3.409,
+				2.820,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"7": 1.539,
+				"12": 1.205,
+				"13": 1.252,
+				"14": 1.692,
+				"15": 1.895
+			}
+		},
+		"12": {
+			"type": "element",
+			"name": "sofa nivel 1",
 			"img": "none.png",
 			"node_id": "12",
-	        "coordinates": [-5.114, 2.820,0.0],
-	        "level": 1,
-	        "associates": {
-	        	"11": 1.205
-            }
-        },
-        "13": {
-	        "type": "element",
-	        "name": "refrigeradora nivel 1",
+			"coordinates": [
+				-5.114,
+				2.820,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"11": 1.205
+			}
+		},
+		"13": {
+			"type": "element",
+			"name": "refrigeradora nivel 1",
 			"img": "none.png",
 			"node_id": "13",
-	        "coordinates": [-2.166, 2.999,0.0],
-	        "level": 1,
-	        "associates": {
-	        	"11": 1.252
-            }
-        },
-        "14": {
-	        "type": "element",
-	        "name": "habitación nivel 1",
+			"coordinates": [
+				-2.166,
+				2.999,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"11": 1.252
+			}
+		},
+		"14": {
+			"type": "element",
+			"name": "habitación nivel 1",
 			"img": "none.png",
 			"node_id": "14",
-	        "coordinates": [-2.166, 2.999,0.0],
-	        "level": 1,
-	        "associates": {
-	        	"11": 1.692
-            }
-        },
-        "15": {
-	        "type": "element",
-	        "name": "baño nivel 1",
+			"coordinates": [
+				-2.166,
+				2.999,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"11": 1.692
+			}
+		},
+		"15": {
+			"type": "element",
+			"name": "baño nivel 1",
 			"img": "none.png",
 			"node_id": "15",
-	        "coordinates": [-3.627, 4.691,0.0],
-	        "level": 1,
-	        "associates": {
-	        	"11": 1.895
-            }
-        },
-        "16": {
-	        "type": "node",
-	        "name": "escaleras punto 1 hacia nivel 2",
+			"coordinates": [
+				-3.627,
+				4.691,
+				0.0
+			],
+			"level": 1,
+			"associates": {
+				"11": 1.895
+			}
+		},
+		"16": {
+			"type": "node",
+			"name": "escaleras punto 1 hacia nivel 2",
 			"img": "none.png",
 			"node_id": "16",
-	        "coordinates": [0, 2.858,1.4],
-	        "level": 1,
-	        "associates": {
-                "2": 3.228,
-                "17": 1.205
-            }
-        },
-        "17": {
-	        "type": "node",
-	        "name": "escaleras punto 2 hacia nivel 2",
+			"coordinates": [
+				0,
+				2.858,
+				1.4
+			],
+			"level": 1,
+			"associates": {
+				"2": 3.228,
+				"17": 1.205
+			}
+		},
+		"17": {
+			"type": "node",
+			"name": "escaleras punto 2 hacia nivel 2",
 			"img": "none.png",
 			"node_id": "17",
-	        "coordinates": [-1.205, 2.858,1.4],
-	        "level": 1,
-	        "associates": {
-                "16": 1.205,
-                "18": 3.6982
-            }
-        },
-        "18": {
-	        "type": "node",
-	        "name": "escaleras punto 1 nivel 2",
+			"coordinates": [
+				-1.205,
+				2.858,
+				1.4
+			],
+			"level": 1,
+			"associates": {
+				"16": 1.205,
+				"18": 3.6982
+			}
+		},
+		"18": {
+			"type": "node",
+			"name": "escaleras punto 1 nivel 2",
 			"img": "none.png",
 			"node_id": "18",
-	        "coordinates": [-1.141, -0.487,2.8],
-	        "level": 2,
-	        "associates": {
-                "17": 3.6982,
-                "19": 1.141,
-                "20": 0.590
-            }
-        },
-        "19": {
-	        "type": "node",
-	        "name": "escaleras punto 2 nivel 2",
+			"coordinates": [
+				-1.141,
+				-0.487,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"17": 3.6982,
+				"19": 1.141,
+				"20": 0.590
+			}
+		},
+		"19": {
+			"type": "node",
+			"name": "escaleras punto 2 nivel 2",
 			"img": "none.png",
 			"node_id": "19",
-	        "coordinates": [0, -0.487,2.8],
-	        "level": 2,
-	        "associates": {
-                "18": 1.141,
-                "31": 3.2729
-            }
-        },
-        "20": {
-	        "type": "door",
-	        "name": "puerta nivel 2",
+			"coordinates": [
+				0,
+				-0.487,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"18": 1.141,
+				"31": 3.2729
+			}
+		},
+		"20": {
+			"type": "door",
+			"name": "puerta nivel 2",
 			"img": "none.png",
 			"node_id": "20",
-	        "coordinates": [-1.141, -1.128,2.8],
-	        "level": 2,
-	        "associates": {
-                "18": 0.590,
-                "21": 1.598,
-                "22": 2.110
-            }
-        },
-        "21": {
-	        "type": "element",
-	        "name": "sala nivel 2",
-	        "img": "none.png",
+			"coordinates": [
+				-1.141,
+				-1.128,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"18": 0.590,
+				"21": 1.598,
+				"22": 2.110
+			}
+		},
+		"21": {
+			"type": "element",
+			"name": "sala nivel 2",
+			"img": "none.png",
 			"node_id": "21",
-	        "coordinates": [-0.987, -2.781,2.8],
-	        "level": 2,
-	        "associates": {
-                "20": 1.598,
-                "22": 1.397
-            }
-        },
-        "22": {
-	        "type": "node",
-	        "name": "punto 3 (nivel 2)",
-	        "img": "none.png",
+			"coordinates": [
+				-0.987,
+				-2.781,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"20": 1.598,
+				"22": 1.397
+			}
+		},
+		"22": {
+			"type": "node",
+			"name": "punto 3 (nivel 2)",
+			"img": "none.png",
 			"node_id": "22",
-	        "coordinates": [-2.384, -2.781,2.8],
-	        "level": 2,
-	        "associates": {
-                "20": 2.110,
-                "21": 1.397,
-                "23": 2.764,
-                "24": 1.978,
-                "25": 3.319
-            }
-        },
-        "23": {
-	        "type": "element",
-	        "name": "comedor nivel 2",
-	        "img": "none.png",
+			"coordinates": [
+				-2.384,
+				-2.781,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"20": 2.110,
+				"21": 1.397,
+				"23": 2.764,
+				"24": 1.978,
+				"25": 3.319
+			}
+		},
+		"23": {
+			"type": "element",
+			"name": "comedor nivel 2",
+			"img": "none.png",
 			"node_id": "23",
-	        "coordinates": [-4.627, -4.447,2.8],
-	        "level": 2,
-	        "associates": {
-                "22": 2.764,
-                "24": 2.060
-            }
-        },
-        "24": {
-	        "type": "element",
-	        "name": "cocina nivel 2",
-	        "img": "none.png",
+			"coordinates": [
+				-4.627,
+				-4.447,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"22": 2.764,
+				"24": 2.060
+			}
+		},
+		"24": {
+			"type": "element",
+			"name": "cocina nivel 2",
+			"img": "none.png",
 			"node_id": "24",
-	        "coordinates": [-4.383, -2.371,2.8],
-	        "level": 2,
-	        "associates": {
-                "22": 1.978,
-                "23": 2.060
-            }
-        },
-        "25": {
-	        "type": "node",
-	        "name": "punto 4 (nivel 2)",
-	        "img": "none.png",
+			"coordinates": [
+				-4.383,
+				-2.371,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"22": 1.978,
+				"23": 2.060
+			}
+		},
+		"25": {
+			"type": "node",
+			"name": "punto 4 (nivel 2)",
+			"img": "none.png",
 			"node_id": "25",
-	        "coordinates": [-2.397, 0.615,2.8],
-	        "level": 2,
-	        "associates": {
-                "22": 3.319,
-                "26": 0.641,
-                "27": 0.690,
-                "28": 3.396
-            }
-        },
-        "26": {
-	        "type": "element",
-	        "name": "baño nivel 2",
-	        "img": "none.png",
+			"coordinates": [
+				-2.397,
+				0.615,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"22": 3.319,
+				"26": 0.641,
+				"27": 0.690,
+				"28": 3.396
+			}
+		},
+		"26": {
+			"type": "element",
+			"name": "baño nivel 2",
+			"img": "none.png",
 			"node_id": "26",
-	        "coordinates": [-2.012, 0.359,2.8],
-	        "level": 2,
-	        "associates": {
-                "25": 0.641
-            }
-        },
-        "27": {
-	        "type": "element",
-	        "name": "habitación 1 nivel 2",
-	        "img": "none.png",
+			"coordinates": [
+				-2.012,
+				0.359,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"25": 0.641
+			}
+		},
+		"27": {
+			"type": "element",
+			"name": "habitación 1 nivel 2",
+			"img": "none.png",
 			"node_id": "27",
-	        "coordinates": [-3.025, 0.859,2.8],
-	        "level": 2,
-	        "associates": {
-                "25": 0.690
-            }
-        },
-        "28": {
-	        "type": "node",
-	        "name": "punto 5 (nivel 2)",
-	        "img": "none.png",
+			"coordinates": [
+				-3.025,
+				0.859,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"25": 0.690
+			}
+		},
+		"28": {
+			"type": "node",
+			"name": "punto 5 (nivel 2)",
+			"img": "none.png",
 			"node_id": "28",
-	        "coordinates": [-2.409, 3.999,2.8],
-	        "level": 2,
-	        "associates": {
-                "25": 3.396,
-                "29": 0.641,
-                "30": 0.590
-            }
-        },
-        "29": {
-	        "type": "element",
-	        "name": "habitación 2 nivel 2",
-	        "img": "none.png",
+			"coordinates": [
+				-2.409,
+				3.999,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"25": 3.396,
+				"29": 0.641,
+				"30": 0.590
+			}
+		},
+		"29": {
+			"type": "element",
+			"name": "habitación 2 nivel 2",
+			"img": "none.png",
 			"node_id": "29",
-	        "coordinates": [-3.063, 4.024,2.8],
-	        "level": 2,
-	        "associates": {
-                "28": 0.641
-            }
-        },
-        "30": {
-	        "type": "element",
-	        "name": "habitación 3 nivel 2",
-	        "img": "none.png",
+			"coordinates": [
+				-3.063,
+				4.024,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"28": 0.641
+			}
+		},
+		"30": {
+			"type": "element",
+			"name": "habitación 3 nivel 2",
+			"img": "none.png",
 			"node_id": "30",
-	        "coordinates": [-1.781, 3.986,2.8],
-	        "level": 2,
-	        "associates": {
-                "25": 0.590
-            }
-        },
-        "31": {
-	        "type": "node",
-	        "name": "escaleras punto 1 hacia nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-1.781,
+				3.986,
+				2.8
+			],
+			"level": 2,
+			"associates": {
+				"25": 0.590
+			}
+		},
+		"31": {
+			"type": "node",
+			"name": "escaleras punto 1 hacia nivel 3",
+			"img": "none.png",
 			"node_id": "31",
-	        "coordinates": [0, 2.858,4.3],
-	        "level": 2,
-	        "associates": {
-                "19": 3.2729,
-                "32": 1.205
-            }
-        },
-        "32": {
-	        "type": "node",
-	        "name": "escaleras punto 2 hacia nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				0,
+				2.858,
+				4.3
+			],
+			"level": 2,
+			"associates": {
+				"19": 3.2729,
+				"32": 1.205
+			}
+		},
+		"32": {
+			"type": "node",
+			"name": "escaleras punto 2 hacia nivel 3",
+			"img": "none.png",
 			"node_id": "32",
-	        "coordinates": [-1.205, 2.858,4.3],
-	        "level": 1,
-	        "associates": {
-                "31": 1.205,
-                "33": 3.6982
-            }
-        },
-        "33": {
-	        "type": "node",
-	        "name": "escaleras nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-1.205,
+				2.858,
+				4.3
+			],
+			"level": 1,
+			"associates": {
+				"31": 1.205,
+				"33": 3.6982
+			}
+		},
+		"33": {
+			"type": "node",
+			"name": "escaleras nivel 3",
+			"img": "none.png",
 			"node_id": "33",
-	        "coordinates": [-1.141, -0.487,5.8],
-	        "level": 3,
-	        "associates": {
-                "32": 3.6982,
-                "34": 0.590
-            }
-        },
-        "34": {
-	        "type": "door",
-	        "name": "puerta nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-1.141,
+				-0.487,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"32": 3.6982,
+				"34": 0.590
+			}
+		},
+		"34": {
+			"type": "door",
+			"name": "puerta nivel 3",
+			"img": "none.png",
 			"node_id": "34",
-	        "coordinates": [-1.141, -1.128,5.8],
-	        "level": 3,
-	        "associates": {
-                "33": 0.590,
-                "35": 1.598,
-                "36": 2.110
-            }
-        },
-        "35": {
-	        "type": "element",
-	        "name": "sala nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-1.141,
+				-1.128,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"33": 0.590,
+				"35": 1.598,
+				"36": 2.110
+			}
+		},
+		"35": {
+			"type": "element",
+			"name": "sala nivel 3",
+			"img": "none.png",
 			"node_id": "35",
-	        "coordinates": [-0.987, -2.781,5.8],
-	        "level": 3,
-	        "associates": {
-                "34": 1.598,
-                "36": 1.397
-            }
-        },
-        "36": {
-	        "type": "node",
-	        "name": "punto 1 (nivel 3)",
-	        "img": "none.png",
+			"coordinates": [
+				-0.987,
+				-2.781,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"34": 1.598,
+				"36": 1.397
+			}
+		},
+		"36": {
+			"type": "node",
+			"name": "punto 1 (nivel 3)",
+			"img": "none.png",
 			"node_id": "36",
-	        "coordinates": [-2.384, -2.781,5.8],
-	        "level": 3,
-	        "associates": {
-                "34": 2.110,
-                "37": 2.764,
-                "38": 1.978,
-                "35": 1.397,
-                "39": 3.319
-            }
-        },
-        "37": {
-	        "type": "element",
-	        "name": "comedor nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-2.384,
+				-2.781,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"34": 2.110,
+				"37": 2.764,
+				"38": 1.978,
+				"35": 1.397,
+				"39": 3.319
+			}
+		},
+		"37": {
+			"type": "element",
+			"name": "comedor nivel 3",
+			"img": "none.png",
 			"node_id": "37",
-	        "coordinates": [-4.627, -4.447,5.8],
-	        "level": 3,
-	        "associates": {
-                "36": 2.764,
-                "38": 2.060
-            }
-        },
-        "38": {
-	        "type": "element",
-	        "name": "cocina nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-4.627,
+				-4.447,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"36": 2.764,
+				"38": 2.060
+			}
+		},
+		"38": {
+			"type": "element",
+			"name": "cocina nivel 3",
+			"img": "none.png",
 			"node_id": "38",
-	        "coordinates": [-4.383, -2.371,5.8],
-	        "level": 3,
-	        "associates": {
-                "36": 1.978,
-                "37": 2.060
-            }
-        },
-        "39": {
-	        "type": "node",
-	        "name": "punto 2 (nivel 3)",
-	        "img": "none.png",
+			"coordinates": [
+				-4.383,
+				-2.371,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"36": 1.978,
+				"37": 2.060
+			}
+		},
+		"39": {
+			"type": "node",
+			"name": "punto 2 (nivel 3)",
+			"img": "none.png",
 			"node_id": "39",
-	        "coordinates": [-2.397, 0.615,5.8],
-	        "level": 3,
-	        "associates": {
-                "36": 3.319,
-                "40": 0.641,
-                "41": 0.690,
-                "42": 3.396
-            }
-        },
-        "40": {
-	        "type": "element",
-	        "name": "baño nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-2.397,
+				0.615,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"36": 3.319,
+				"40": 0.641,
+				"41": 0.690,
+				"42": 3.396
+			}
+		},
+		"40": {
+			"type": "element",
+			"name": "baño nivel 3",
+			"img": "none.png",
 			"node_id": "40",
-	        "coordinates": [-2.012, 0.359,5.8],
-	        "level": 3,
-	        "associates": {
-                "39": 0.641
-            }
-        },
-        "41": {
-	        "type": "element",
-	        "name": "habitación 1 nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-2.012,
+				0.359,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"39": 0.641
+			}
+		},
+		"41": {
+			"type": "element",
+			"name": "habitación 1 nivel 3",
+			"img": "none.png",
 			"node_id": "41",
-	        "coordinates": [-3.025, 0.859,5.8],
-	        "level": 3,
-	        "associates": {
-                "39": 0.690
-            }
-        },
-        "42": {
-	        "type": "node",
-	        "name": "punto 3 (nivel 3)",
-	        "img": "none.png",
+			"coordinates": [
+				-3.025,
+				0.859,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"39": 0.690
+			}
+		},
+		"42": {
+			"type": "node",
+			"name": "punto 3 (nivel 3)",
+			"img": "none.png",
 			"node_id": "42",
-	        "coordinates": [-2.409, 3.999,5.8],
-	        "level": 3,
-	        "associates": {
-                "39": 3.396,
-                "43": 0.641,
-                "44": 0.590
-            }
-        },
-        "43": {
-	        "type": "element",
-	        "name": "habitación 2 nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-2.409,
+				3.999,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"39": 3.396,
+				"43": 0.641,
+				"44": 0.590
+			}
+		},
+		"43": {
+			"type": "element",
+			"name": "habitación 2 nivel 3",
+			"img": "none.png",
 			"node_id": "43",
-	        "coordinates": [-3.063, 4.024,5.8],
-	        "level": 3,
-	        "associates": {
-                "42": 0.641
-            }
-        },
-        "44": {
-	        "type": "element",
-	        "name": "habitación 3 nivel 3",
-	        "img": "none.png",
+			"coordinates": [
+				-3.063,
+				4.024,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"42": 0.641
+			}
+		},
+		"44": {
+			"type": "element",
+			"name": "habitación 3 nivel 3",
+			"img": "none.png",
 			"node_id": "44",
-	        "coordinates": [-1.781, 3.986,5.8],
-	        "level": 3,
-	        "associates": {
-                "42": 0.590
-            }
-        }
+			"coordinates": [
+				-1.781,
+				3.986,
+				5.8
+			],
+			"level": 3,
+			"associates": {
+				"42": 0.590
+			}
+		}
 	}
 }

@@ -15,7 +15,7 @@ let errorReportSchema = new Schema({
     }
 
 }, {
-    collection: 'errorReports'
+    collection: 'reports'
 })
 
 module.exports = mongoose.model('ErrorReport', errorReportSchema)
