@@ -277,3 +277,39 @@ const getLoging = function(email,password ,callback){
       done()
     })
   })
+
+//Get markers for a map
+var getMarkersForMap = function(mapId, callback){
+    request
+    .get(`https://inside-maps-api.herokuapp.com/api/v1/map/${mapId}/markers`)
+    .end(function(error, res){
+        if(!error){
+            let markers = res.body.map(function(marker){
+                return marker
+            });
+            callback(null, markers);
+        }else{
+            callback('Error Ocurred');
+        }
+    })
+}
+
+describe('GET markers of a map', function(){
+    beforeEach(function(){
+        let response =[{
+            "message": "Map markers retrived successfully",
+            "result": []
+        }];
+
+        nock('https://inside-maps-api.herokuapp.com')
+        .get('/api/v1/map/5f1df930b9bc5f3bb8b22093/markers')
+        .reply(200, response)
+    });
+    it('returns markers of map with id 5f1df930b9bc5f3bb8b22093',function(done){
+        const id ='5f1df930b9bc5f3bb8b22093'
+        getMarkersForMap(id, function(err,marker){
+            expect(Array.isArray(marker)).to.equal(true)
+        })
+        done()
+    })
+})
