@@ -313,3 +313,37 @@ describe('GET markers of a map', function(){
         done()
     })
 })
+
+//get all the markers
+var getAllMarkers = function(callback){
+    request
+    .get(`https://inside-maps-api.herokuapp.com/api/v1/markers`)
+    .end(function(error, res){
+        if(!error){
+            let markers = res.body.map(function(marker){
+                return marker
+            });
+            callback(null, markers);
+        }else {
+            callback('Error Ocurred');
+        }
+    })
+}
+
+describe('Get all the markers', function(){
+    beforeEach(function(){
+        let markerResponse = [{
+            "message":"Markers retrieved successfully",
+            "result": []
+        }];
+        nock('https://inside-maps-api.herokuapp.com')
+        .get('/api/v1/markers')
+        .reply(200, markerResponse)
+    });
+    it('returns all the markers in the DB', function(done){
+        getAllMarkers(function(err,markers){
+            expect(Array.isArray(markers)).to.equal(true)
+        })
+        done()
+    })
+})
