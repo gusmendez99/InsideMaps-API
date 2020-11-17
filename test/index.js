@@ -1,5 +1,6 @@
 const expect = require('chai').expect;
 const nock = require('nock');
+const { get } = require('superagent');
 const request = require('superagent')
 
 //TEST TO GET A MAP
@@ -315,7 +316,7 @@ describe('GET markers of a map', function(){
 })
 
 //get all the markers
-var getAllMarkers = function(callback){
+const getAllMarkers = function(callback){
     request
     .get(`https://inside-maps-api.herokuapp.com/api/v1/markers`)
     .end(function(error, res){
@@ -577,6 +578,42 @@ describe('GET ALL MAPS', function(){
     it('returns all maps in the DB', function(done){
         getMaps(function(err, map){
             expect(Array.isArray(map)).to.equal(true)
+        })
+        done()
+    })
+})
+
+//FIND SHORTEST PATH
+const getShortestPath = function(start, end, mapId ,callback){
+    request
+    .post(`https://inside-maps-api.herokuapp.com/api/v1/navigation/find-shortest-path/${mapId}/`)
+    .send({startNode:start, endNode:end})
+    .end(function(error,res){
+        if(!error){
+            nodes = res.body
+            callback(null, nodes);
+        }else{
+            callback('Error Ocurred')
+        }
+    })
+}
+
+describe('GET route', function(){
+    beforeEach(function(){
+        let response = {
+            "message": "Shortest path retrieved successfully",
+            "result": {
+            "distance": "Infinity",
+            "path": []
+            }
+        }
+        nock('https://inside-maps-api.herokuapp.com')
+        .post('/api/v1/navigation/find-shortest-path/5f55ba50c7bcde0024934791/', {startNode: 1, endNode: 42})
+        .reply(200, response)
+    });
+    it('returns the shortest path between node 1 and 42 of map 5f55ba50c7bcde0024934791', function(done){
+        getShortestPath(1,42,'5f55ba50c7bcde0024934791',function(err,path){
+           expect(path).to.have.property('message', 'Shortest path retrieved successfully')
         })
         done()
     })
